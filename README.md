@@ -12,9 +12,8 @@ We are creating a basic server that will allow end users to:
 
 -   sign up
 -   log in
--   create a new list
--   add shopping list items
--   remove shopping list items
+-   add items to a shopping list
+-   remove items from a shopping list
 -   toggle item status
 
 ## Links to application deployment
@@ -23,7 +22,7 @@ We are creating a basic server that will allow end users to:
 
 ## Include embedded UML
 
-![]()
+![UML](lab09.PNG)
 
 ## Talk about your routes
 

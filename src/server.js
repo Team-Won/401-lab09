@@ -7,10 +7,10 @@ const express = require('express');
 // Esoteric Resources
 const errorHandler = require('./error-handlers/500.js');
 const notFound = require('./error-handlers/404.js');
-const v1routes = require('./src/routes/v1routes');
-const v2routes = require('./src/routes/v2routes');
+const v1routes = require('./routes/v1routes');
+const v2routes = require('./routes/v2routes');
 
-const logger = require('./auth/middleware/logger.js');
+const logger = require('./middleware/logger.js');
 
 const { db, users, listItem } = require('./models/index.js')
 

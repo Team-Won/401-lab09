@@ -2,7 +2,7 @@
 
 const express = require('express');
 const dataModules = require('../models');
-const bearerAuth = require('../middleware/bearer');
+const bearerAuth = require('../middleware/bearerAuth.js');
 const acl = require('../middleware/acl')
 
 const router = express.Router();

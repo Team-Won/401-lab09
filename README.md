@@ -23,7 +23,7 @@ We are creating a basic server that will allow end users to:
 
 ## Include embedded UML
 
-...
+![]()
 
 ## Talk about your routes
 
@@ -39,3 +39,19 @@ We are creating a basic server that will allow end users to:
 -   HTTP GET
     -   Path: /
     -   responds with the last string used in post route /talk
+
+### NOTES TO TEAM:
+
+**DONE**
+
+-   models (index, item, user)
+-   index.js (main)
+-   server.js
+
+**NOT COMPLETED**
+
+-   v1routes
+-   v2routes
+-   error handlers
+-   middleware
+-   tests

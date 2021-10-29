@@ -17,8 +17,8 @@ router.param('model', (req, res, next) => {
 	}
 });
 
-router.get('/:model', bearerAuth, acl('user'), bearerAuth, handleGetAll);
-router.get('/:model/:id', bearerAuth, acl('user'), bearerAuth, handleGetOne);
+router.get('/:model', bearerAuth, acl('user'), handleGetAll);
+router.get('/:model/:id', bearerAuth, acl('user'), handleGetOne);
 router.post('/:model', bearerAuth, acl('user'), handleCreate);
 router.put('/:model/:id', bearerAuth, acl('user'), handleUpdate);
 router.delete('/:model/:id', bearerAuth, acl('user'), handleDelete);

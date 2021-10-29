@@ -7,12 +7,12 @@ const express = require('express');
 // Esoteric Resources
 const errorHandler = require('./error-handlers/500.js');
 const notFound = require('./error-handlers/404.js');
-const v1routes = require('./src/routes/v1routes');
-const v2routes = require('./src/routes/v2routes');
+const v1routes = require('./routes/v1routes');
+const v2routes = require('./routes/v2routes');
 
-const logger = require('./auth/middleware/logger.js');
-
-const { db, users, listItem } = require('./models/index.js')
+// middleware
+const logger = require('./middleware/logger.js');
+const validator = require('./middleware/validator.js');
 
 // Prepare the express app
 const app = express();
@@ -24,10 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(logger);
-
-// Models
-app.use(users);
-app.use(listItem);
+app.use(validator);
 
 // Routes
 app.use(v1routes);

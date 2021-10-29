@@ -10,7 +10,9 @@ const notFound = require('./error-handlers/404.js');
 const v1routes = require('./routes/v1routes');
 const v2routes = require('./routes/v2routes');
 
+// middleware
 const logger = require('./middleware/logger.js');
+const validator = require('./middleware/validator.js');
 
 const { db, users, listItem } = require('./models/index.js')
 
@@ -24,6 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(logger);
+app.use(validator);
 
 // Models
 app.use(users);

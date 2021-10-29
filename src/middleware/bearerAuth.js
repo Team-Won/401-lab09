@@ -3,7 +3,6 @@
 const { users } = require('../models/user.js');
 
 module.exports = async (req, res, next) => {
-
   try {
 
     if (!req.headers.authorization) { _authError() }
@@ -21,4 +20,5 @@ module.exports = async (req, res, next) => {
   function _authError() {
     next('Invalid Login');
   }
+
 };

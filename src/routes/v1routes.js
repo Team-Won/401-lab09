@@ -5,7 +5,7 @@ const authRouter = express.Router();
 
 const { users } = require('../models');
 const logger = require('../middleware/logger.js');
-const validator = require('../middleware/validator.js');
+// const validator = require('../middleware/validator.js');
 const permissions = require('../middleware/acl.js');
 const basicAuth = require('../middleware/basicAuth.js');
 const bearerAuth = require('../middleware/bearerAuth.js');

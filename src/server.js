@@ -14,7 +14,7 @@ const v2routes = require('./routes/v2routes');
 const logger = require('./middleware/logger.js');
 const validator = require('./middleware/validator.js');
 
-const { db, users, listItem } = require('./models/index.js')
+const {db, users, listItem} = require('./models/index.js');
 
 // Prepare the express app
 const app = express();
@@ -23,14 +23,14 @@ const app = express();
 // app.use(morgan('dev'));
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 
 app.use(logger);
 app.use(validator);
 
 // Models
-app.use(users);
-app.use(listItem);
+// app.use(users);
+// app.use(listItem);
 
 // Routes
 app.use(v1routes);
@@ -41,11 +41,11 @@ app.use('*', notFound);
 app.use(errorHandler);
 
 module.exports = {
-	server: app,
-	start: (port) => {
-		app.listen(port, () => {
-			console.log(`Server Up on ${port}`);
-		});
-	},
+  server: app,
+  start: (port) => {
+    app.listen(port, () => {
+      console.log(`Server Up on ${port}`);
+    });
+  },
 };
 

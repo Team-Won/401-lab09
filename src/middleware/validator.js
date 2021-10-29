@@ -1,7 +1,17 @@
 'use strict';
 
-const validate = (req, res, next) => {
-  // what do we put here?
-}
+const validator = (req, res, next) => {
+  const token = req.token;
 
-module.exports = validate;
+  next();
+  // todo: fix validator
+/*
+  if (token) {
+    next();
+  } else {
+    next('Invalid Request');
+  }
+*/
+};
+
+module.exports = validator;
